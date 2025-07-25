@@ -1,8 +1,8 @@
 name = "smart_meter_gateway_sample_data_generator"
 version = "1.0.0"
 
-description = "TBD"
-licences = ["TBD"]
+description = "A generator to provide SMG data for protoyping"
+licences = ["AGPL-3.0"]
 repository = { type = "github", user = "SturmDerLiebe", repo = "smart_meter_gateway_sample_data_generator" }
 
 [dependencies]
