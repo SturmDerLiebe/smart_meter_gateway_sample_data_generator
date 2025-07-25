@@ -1,0 +1,12 @@
+name = "smart_meter_gateway_sample_data_generator"
+version = "1.0.0"
+
+description = "TBD"
+licences = ["TBD"]
+repository = { type = "github", user = "SturmDerLiebe", repo = "smart_meter_gateway_sample_data_generator" }
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
