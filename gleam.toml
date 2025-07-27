@@ -1,4 +1,4 @@
-name = "smart_meter_gateway_sample_data_generator"
+name = "smg_gen"
 version = "1.0.0"
 
 description = "A generator to provide SMG data for protoyping"
