@@ -4,15 +4,7 @@ import gleam/int
 import gleam/time/duration.{type Duration}
 import gleam/time/timestamp
 import internal/timesturm
-
-pub type UnixTimestamp =
-  Int
-
-/// Smart Meter Gateway Data
-pub opaque type SmgData {
-  /// Smart Meter Gateway Data Record Constructor
-  SmgData(timestamp: UnixTimestamp, meter_id: String, kilowatt_hours: Float)
-}
+import smg_gen/smg_data.{type SmgData}
 
 /// Sends Smart Meta Gateway Data on `every` specified interval `to` the provded callback function.
 /// **Important**: This creates an infinite loop!
@@ -26,8 +18,8 @@ pub fn send_data_on(every interval: Duration, to cb: fn(SmgData) -> Nil) {
 }
 
 fn create_random_smg_data() {
-  SmgData(
-    timestamp: timestamp.system_time()
+  smg_data.SmgData(
+    unix_timestamp: timestamp.system_time()
       |> timestamp.to_unix_seconds()
       |> float.round(),
     meter_id: int.random(1000) |> int.to_string,
