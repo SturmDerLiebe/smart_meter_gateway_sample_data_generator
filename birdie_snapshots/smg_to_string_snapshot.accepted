@@ -1,0 +1,11 @@
+---
+version: 1.3.2
+title: smg_to_string_snapshot
+file: ./test/smg_data_test.gleam
+test_name: smg_to_string_snapshot_test
+---
+
+  Smart Meter Data:
+    - Timestamp: 12345
+    - ID: 112233
+    - Reading: 1.24kWh
